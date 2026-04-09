@@ -10,11 +10,17 @@ const loadPreferences = () => {
 
 colorPicker.addEventListener('input', (e) => {
     const color = e.target.value;
+    console.log(articleColorPicker)
     document.documentElement.style.setProperty('--primary-color', color);
     localStorage.setItem('primaryColor, color');
 });
 
 articleColorPicker.addEventListener('input', (e) => {
+    const color = e.target.value;
+    newsArticles.forEach(article => {
+        article.style.backgroundColor = color;
+    });
+    localStorage.setItem('articleColor', color);
 });
 
 fontSelect.addEventListener('change', (e) => {
