@@ -12,7 +12,7 @@ colorPicker.addEventListener('input', (e) => {
     const color = e.target.value;
     console.log(articleColorPicker)
     document.documentElement.style.setProperty('--primary-color', color);
-    localStorage.setItem('primaryColor, color');
+    localStorage.setItem('primaryColor', color);
 });
 
 articleColorPicker.addEventListener('input', (e) => {
