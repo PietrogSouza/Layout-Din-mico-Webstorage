@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #4285f4;
+    --text-color: #333;
+    --bg-color: #fff;
+    --font-family: "Roboto"
+}
+
+/* Dark mode styles
+Quando o BODY estiver com a classe .dark */
+body.dark{
+    --text-color: #f1f1f1;
+    --bg-color: #121212;
+}
+
