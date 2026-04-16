@@ -6,6 +6,12 @@ const body = document.querySelector('body');
 const newsArticles = document.querySelectorAll('.news');
 
 const loadPreferences = () => {
+    const savedColor = localStorage.getItem('primaryColor');
+    if (savedColor){
+        document.documentElement.style.setProperty('--primary-color', savedColor);
+        colorPicker.value = savedColor;
+    }
+
 };
 
 colorPicker.addEventListener('input', (e) => {
