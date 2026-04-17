@@ -10,15 +10,15 @@ const loadPreferences = () => {
     if (savedColor){
         document.documentElement.style.setProperty('--primary-color', savedColor);
         colorPicker.value = savedColor;
-        colorPicker.textContent = ''
-        colorPicker.style.color = savedColor
+        
     }
-
 };
 
 colorPicker.addEventListener('input', (e) => {
     const color = e.target.value;
-    console.log(articleColorPicker)
+    newsArticles.forEach(article => {
+        article.style.color = color;
+    });
     document.documentElement.style.setProperty('--primary-color', color);
     localStorage.setItem('primaryColor', color);
 });
