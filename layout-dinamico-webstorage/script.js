@@ -10,6 +10,8 @@ const loadPreferences = () => {
     if (savedColor){
         document.documentElement.style.setProperty('--primary-color', savedColor);
         colorPicker.value = savedColor;
+        colorPicker.textContent = ''
+        colorPicker.style.color = savedColor
     }
 
 };
@@ -32,5 +34,5 @@ articleColorPicker.addEventListener('input', (e) => {
 fontSelect.addEventListener('change', (e) => {
 });
 
-themeToggle.addEventListener('click', () => {
+themeToggle.addEventListener('click', (e) => {
 });
